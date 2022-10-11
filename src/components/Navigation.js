@@ -48,7 +48,7 @@ function Navigation() {
                             <LinkContainer to="/cart">
                                 <Nav.Link>
                                     <i className="fas fa-shopping-cart"></i>
-                                    {user?.cart?.count > 0 && (
+                                    {user?.cart.count > 0 && (
                                         <span className="badge badge-warning" id="cartcount">
                                             {user.cart.count}
                                         </span>
@@ -97,7 +97,7 @@ function Navigation() {
             </Container>
             {/* notifications */}
             <div className="notifications-container" ref={notificationRef} style={{ position: "absolute", top: bellPos.top + 30, left: bellPos.left, display: "none" }}>
-                {user?.notifications?.length > 0 ? (
+                {user?.notifications.length > 0 ? (
                     user?.notifications.map((notification) => (
                         <p className={`notification-${notification.status}`}>
                             {notification.message}
